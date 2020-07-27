@@ -54,3 +54,29 @@ You can check Blocktap documentation for more help: https://www.blocktap.io/docs
 **Time to spend**
 
 We expect you to spend 4-6 hours to complete this challenge. However you can do the assignment whenever you want within a 24 hour window after you *cloned* the repository. When you're finished send us the url of the *cloned* repository with your code.
+
+---
+#### How to run
+As this project is a complex one, I've changed the way it should be run. 
+If you are running it for the FIRST time, you must do the following steps:
+1. yarn/npm install
+2. yarn/npm run develop
+
+Second step is not the regular one: yarn/npm start, as I'm doing a copy of crypto icons in the public's folder, so I can use then on the fly when I need them
+
+- After that you can continue using the regular command (yarn/npm start) if needed or same command as shown in step 2 above
+
+- Markets with no ticker information are shown, but did not participate in the average last price calculations. Also their detailed page is not accessible (Step/Screen 2).
+
+- Site is responsive (used biuld in options from Material UI)
+
+- Dark theme option is available
+
+
+#### Known issues
+The GraphQL server provided from: https://coinmarketcap.com/ has some limits restrictions about the queries. This causes some issues in the way I'd structured my queries. The downside is that the 'All' link in the table's footer is not working. I didnt spent too much time to look for a workaround. So the only available options there are '25' and '50' records per page. One possible solution of this issue is to create a lazy loading of the records. 
+
+Every screen in my implementation is independent. This means that you can directly open/refresh a known page and the data will be loaded (if there is a response) - either from the Apollo's cache or fetch from the GraphQL's server. The downside is that I have multiple queries, which I've tried to batch in one, but the server does not support this option, so there are a couple of Network calls.
+
+
+
