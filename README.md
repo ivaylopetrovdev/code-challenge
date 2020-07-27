@@ -72,10 +72,11 @@ Second step is not the regular one: yarn/npm start, as I'm doing a copy of crypt
 
 - Dark theme option is available
 
-###USED Techs:
+---
+#### USED Techs:
 React, React Router v5, Apollo Client, GraphQL, Typescript, Material-UI 
 
-
+---
 #### Known issues
 The GraphQL server provided from: https://coinmarketcap.com/ has some limits restrictions about the queries. This causes some issues in the way I'd structured my queries. The downside is that the 'All' link in the table's footer is not working. I didnt spent too much time to look for a workaround. So the only available options there are '25' and '50' records per page. One possible solution of this issue is to create a lazy loading of the records. 
 
